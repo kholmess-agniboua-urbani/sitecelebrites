@@ -1,129 +1,151 @@
+/* Chaque page définit ses couleurs. Les règles suivantes sont communes. */
 body {
-  background-color: #F1F5F9;
-  color: #1E293B;
-  font-family: Arial, sans-serif;
+  --fond: #f1f5f9;
+  --texte: #1e293b;
+  --bandeau: #12161f;
+  --accent: #f59e0b;
+  --bouton: #f59e0b;
+  --carte: white;
   margin: 0;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #12161F;
-  color: #F8FAFC;
-  padding: 40px 20px;
+  font-family: Arial, sans-serif;
   text-align: center;
-  border-bottom: 3px solid #F59E0B;
+  background: var(--fond);
+  color: var(--texte);
+}
+.daft-punk {
+  --fond: #0a0a0a;
+  --texte: #f7f4ee;
+  --bandeau: #14151a;
+  --accent: #efc66f;
+  --bouton: #efc66f;
+  --carte: #191a20;
+}
+.zidane {
+  --fond: #f4f6fa;
+  --texte: #17264a;
+  --bandeau: #101d3b;
+  --accent: #164194;
+  --bouton: #dce6ff;
 }
 
-header nav {
-  margin-top: 20px;
+/* Navigation et liens */
+header, footer, .zidane nav {
+  padding: 20px;
+  background: var(--bandeau);
+  color: white;
 }
-
-header a {
-  color: #F59E0B;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 10px;
-  padding: 8px 18px;
-  border: 1px solid #F59E0B;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+header, .zidane nav {
+  border-bottom: 1px solid var(--bouton);
 }
-
-header a:hover {
-  background-color: #F59E0B;
-  color: #12161F;
-}
-
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-section, article, .carte {
-  background-color: #FFFFFF;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 30px;
-  margin-bottom: 30px;
-  border-top: 4px solid #F59E0B;
-}
-
-/* Les liens reviennent à la ligne sur les petits écrans. */
-header nav {
+nav, footer ul, .footer-links, .reseaux, fieldset {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 15px;
 }
-
-header nav a {
-  margin: 0;
+.daft-punk nav, .zidane nav {
+  justify-content: space-between;
 }
-
-header a:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 4px;
+.site-title {
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-
-main img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Motifs de la page Daft Punk, dans la palette de StarPulse. */
-:root {
-  --accent: #f59e0b;
-  --surface: #fff;
-}
-
-header {
-  padding: 20px;
-  border-bottom: 1px solid var(--accent);
-}
-
-header h1 {
-  color: var(--accent);
-  text-transform: uppercase;
-}
-
-header nav a {
+nav a, footer a {
+  display: inline-block;
   padding: 10px 16px;
+  border: 1px solid var(--bouton);
   border-radius: 5px;
+  color: var(--bouton);
+  text-decoration: none;
+}
+nav a:hover, footer a:hover, nav a:focus-visible, footer a:focus-visible {
+  background: var(--bouton);
+  color: var(--bandeau);
 }
 
-header nav a:focus-visible {
-  background: var(--accent);
-  color: #12161f;
+/* Contenu des trois pages */
+main {
+  width: 80%;
+  margin: 40px auto;
 }
-
-main section {
-  margin: 0 auto 3rem;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  text-align: center;
+.fansite main {
+  width: 90%;
+  max-width: 900px;
 }
-
-main h2 {
+h1, .fansite h2 {
   text-transform: uppercase;
 }
-
-main img {
+h1, article a {
+  color: var(--accent);
+}
+.zidane h1 {
+  color: #172b55;
+}
+img, video {
+  display: block;
   box-sizing: border-box;
-  width: min(400px, 90%);
-  margin: 0 auto;
+  width: 400px;
+  max-width: 90%;
+  height: auto;
+  margin: auto;
   border: 4px solid var(--accent);
   border-radius: 5px;
 }
-
-main section p {
+video {
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: var(--bandeau);
+}
+.fansite section {
+  margin-bottom: 48px;
+}
+.fansite section p, .texte, article, .contact {
   max-width: 700px;
-  margin: 30px auto 0;
-  padding: clamp(16px, 4vw, 25px);
+  margin: 30px auto;
+  padding: 25px;
   border-left: 5px solid var(--accent);
-  background: var(--surface);
+  background: var(--carte);
+  line-height: 1.6;
   text-align: left;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+.reseaux h2 {
+  width: 100%;
+  margin-bottom: 0;
+}
+footer h2, article h2 {
+  font-size: 1.17em;
+}
+fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+legend {
+  margin: 0 auto 12px;
+}
+input, textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .site-title {
+    order: -1;
+    width: 100%;
+  }
+  .zidane nav {
+    justify-content: center;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .fansite section p, .texte, article, .contact {
+    padding: 16px;
+  }
 }
