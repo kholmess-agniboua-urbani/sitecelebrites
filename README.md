@@ -12,10 +12,17 @@ Trois portraits pour une présentation de Daft Punk, Zinédine Zidane et Beyonc�
 
 **fansite.html** contient le design, les photos et la vidéo. Vous pouvez aussi copier ce fichier seul sur une clé USB et l’ouvrir hors ligne. Les liens vers les sites externes nécessitent une connexion.
 
-## Modifier les pages
+## Où trouver les fichiers
 
-- `sources/accueil.html` et `fansite.css` contiennent les fichiers modifiables de l’accueil.
-- `daft-punk.html` et `daft-punk.css` contiennent le portrait de Daft Punk.
-- `Fansite1/Zidane.html` et `Fansite1/style.css` contiennent le portrait de Zidane. L’envoi du formulaire de démonstration est désactivé.
+| Fichier ou dossier | Rôle |
+| --- | --- |
+| `fansite.html` | Présentation prête à ouvrir, même hors ligne |
+| [sources/](sources/) | Pages HTML modifiables de l’accueil, de Daft Punk et de Zidane |
+| [styles/](styles/) | Feuilles CSS de chaque page |
+| [medias/images/](medias/images/) | Images de l’accueil et galerie de Zidane |
+| [medias/videos/](medias/videos/) | Vidéo de Daft Punk |
+| [scripts/](scripts/) | Génération du fichier de présentation |
 
-Après avoir modifié une page, un style ou un média, exécutez `node build-presentation.mjs` pour régénérer le fichier autonome `fansite.html`.
+Les anciennes adresses des pages redirigent vers les fichiers correspondants. L’envoi du formulaire de démonstration de Zidane est désactivé.
+
+Après avoir modifié une page, un style ou un média, exécutez `node scripts/build-presentation.mjs` depuis la racine du dépôt pour régénérer la présentation.

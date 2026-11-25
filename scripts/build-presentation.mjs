@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = dirname(fileURLToPath(import.meta.url));
+const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const text = file => readFileSync(join(root, file), 'utf8');
 const media = new Map();
 const mimeTypes = { png: 'image/png', jpg: 'image/jpeg', mp4: 'video/mp4' };
@@ -18,27 +18,27 @@ function dataUrl(file) {
   return media.get(file);
 }
 
-function pack(page, css, folder = '') {
+function pack(page) {
   return text(page)
-    .replace(/<link rel="stylesheet" href="[^"]+">/, '<style>\n' + text(css) + '</style>')
-    .replace(/\b(src|poster)="([^"]+)"/g, (_, attr, file) => attr + '="' + dataUrl(folder + file) + '"')
-    .replace(/<a href="Daft-Punk\.mp4">Ouvrir le fichier MP4<\/a>\./, '')
+    .replace(/<link rel="stylesheet" href="([^"]+)">/, (_, file) => '<style>\n' + text(join(dirname(page), file)) + '</style>')
+    .replace(/\b(src|poster)="([^"]+)"/g, (_, attr, file) => attr + '="' + dataUrl(join(dirname(page), file)) + '"')
+    .replace(/<a href="\.\.\/medias\/videos\/Daft-Punk\.mp4">Ouvrir le fichier MP4<\/a>\./, '')
     .replace(/href="(?:\.\.\/)?index\.html"/g, 'href="#accueil" target="_parent"')
     .replace(/href="(?:\.\.\/index\.html)?#beyoncé"/g, 'href="#beyoncé" target="_parent"')
     .replace(/href="(?:\.\.\/)?daft-punk\.html"/g, 'href="#daft-punk" target="_parent"')
-    .replace(/href="(?:\.\.\/)?Fansite1\/Zidane\.html"/g, 'href="#zidane" target="_parent"')
+    .replace(/href="zidane\.html"/g, 'href="#zidane" target="_parent"')
     .replace(/<a href="(https:\/\/[^"]+)"(?![^>]*\btarget=)/g, '<a href="$1" target="_blank" rel="noopener noreferrer"');
 }
 
 const pages = {
-  accueil: pack('sources/accueil.html', 'fansite.css', 'sources/'),
-  daftPunk: pack('daft-punk.html', 'daft-punk.css'),
-  zidane: pack('Fansite1/Zidane.html', 'Fansite1/style.css', 'Fansite1/')
+  accueil: pack('sources/accueil.html'),
+  daftPunk: pack('sources/daft-punk.html'),
+  zidane: pack('sources/zidane.html')
 };
 
 const archive = JSON.stringify(pages).replaceAll('<', '\\u003c');
 const html = '<!DOCTYPE html>\n' + `
-<!-- Fichier autonome généré par node build-presentation.mjs. -->
+<!-- Fichier autonome généré par node scripts/build-presentation.mjs. -->
 <html lang="fr">
 <head>
   <meta charset="utf-8">
