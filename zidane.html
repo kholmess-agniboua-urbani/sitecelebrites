@@ -3,7 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="zidane.css">
+    <!-- Copie du CSS pour l’ouverture du fichier HTML seul. Modifier la feuille .css en priorité. -->
+    <style id="styles-de-secours">
+/* STYLE GENERAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fa;
+    color: #17264a;
+    text-align: center;
+}
+
+/* BARRE DE NAVIGATION */
+nav {
+    background-color: #101d3b;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav .site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #dce6ff;
+    text-decoration: underline;
+}
+
+/* CONTENU PRINCIPAL */
+.content {
+    margin: 40px auto;
+    width: 80%;
+}
+
+.content h1 {
+    color: #172b55;
+    text-transform: uppercase;
+}
+
+/* Portrait */
+.portrait img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* IMAGE */
+img {
+    box-sizing: border-box;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    border: 4px solid white;
+    border-radius: 5px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+/* TEXTE SOUS L'IMAGE */
+.text {
+    background-color: white;
+    margin: 30px auto;
+    padding: 25px;
+    border-left: 5px solid #164194;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* BAS DE PAGE */
+footer {
+    background-color: #101d3b;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+footer a:hover {
+    color: #dce6ff;
+    text-decoration: underline;
+}
+
+.article h2, footer h2 {
+    font-size: 1.17em;
+}
+
+.contact-form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-form legend {
+    margin: 0 auto 12px;
+}
+
+.contact-form input, .contact-form textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+footer h2 {
+    color: white;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+    nav {
+        justify-content: center;
+        gap: 8px 16px;
+    }
+
+    nav .site-title {
+        order: -1;
+        width: 100%;
+    }
+
+    footer a {
+        display: inline-block;
+        margin: 4px 8px;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="zidane.css"
+          onload="document.getElementById('styles-de-secours')?.remove()" onerror="this.remove()">
     <title>Zinédine Zidane | Fansite</title>
 </head>
 <body>

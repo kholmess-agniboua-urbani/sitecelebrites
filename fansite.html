@@ -4,7 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>StarPulse - Trois stars, trois univers</title>
-  <link rel="stylesheet" href="fansite.css">
+  <!-- Copie du CSS pour l’ouverture du fichier HTML seul. Modifier la feuille .css en priorité. -->
+  <style id="styles-de-secours">
+body {
+  background-color: #F1F5F9;
+  color: #1E293B;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #12161F;
+  color: #F8FAFC;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 3px solid #F59E0B;
+}
+
+header nav {
+  margin-top: 20px;
+}
+
+header a {
+  color: #F59E0B;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 8px 18px;
+  border: 1px solid #F59E0B;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+header a:hover {
+  background-color: #F59E0B;
+  color: #12161F;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section, article, .carte {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-top: 4px solid #F59E0B;
+}
+
+/* Les liens reviennent à la ligne sur les petits écrans. */
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+header nav a {
+  margin: 0;
+}
+
+header a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+main img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+  </style>
+  <link rel="stylesheet" href="fansite.css"
+        onload="document.getElementById('styles-de-secours')?.remove()" onerror="this.remove()">
 </head>
 <body>
   <header id="home">
