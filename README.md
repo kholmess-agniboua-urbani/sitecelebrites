@@ -10,5 +10,5 @@ Le site fonctionne sans installation ni serveur. Les images sont incluses et les
 
 ## Page Zidane
 
-- `Fansite1/Zidane.html` contient le portrait, la chronologie, les photos et les sources.
+- `Fansite1/Zidane.html` contient le portrait, les articles et la galerie de quatre photos. Le formulaire de démonstration ne permet pas l’envoi.
 - `Fansite1/style.css` gère la mise en page sur ordinateur et sur mobile.

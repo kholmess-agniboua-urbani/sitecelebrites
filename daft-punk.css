@@ -17,9 +17,9 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 a {
@@ -100,4 +100,8 @@ footer a {
     .text {
         padding: 16px;
     }
+}
+
+footer h2 {
+    font-size: 1.17em;
 }
