@@ -4,9 +4,13 @@ Trois portraits pour une présentation de Daft Punk, Zinédine Zidane et Beyonc�
 
 ## Ouvrir la présentation
 
-Sur GitHub, cliquez sur **Code**, puis **Download ZIP**. Sur Windows, cliquez sur **Extraire tout**, puis ouvrez `index.html` dans Chrome. Si Windows masque les extensions, ce fichier apparaît sous le nom **index**.
+**[Télécharger la présentation au format ZIP](https://github.com/kholmess-agniboua-urbani/sitecelebrites/archive/refs/heads/main.zip)**
 
-`index.html` contient les styles, les photos et la vidéo de Daft Punk. Vous pouvez le copier seul et l’ouvrir hors ligne. Les liens vers les sites externes nécessitent une connexion.
+1. Dans l’Explorateur Windows, faites un clic droit sur le ZIP et choisissez **Extraire tout**.
+2. Dans le dossier extrait, ouvrez **index.html** avec Chrome. Windows peut l’afficher simplement sous le nom **index**.
+3. Sur l’accueil, cliquez sur **Daft Punk**, **Zidane** ou **Beyoncé**. Sur la page Daft Punk, cliquez sur **Lecture** pour lancer la vidéo.
+
+**index.html** contient le design, les photos et la vidéo. Vous pouvez aussi copier ce fichier seul sur une clé USB et l’ouvrir hors ligne. Les liens vers les sites externes nécessitent une connexion.
 
 ## Modifier les pages
 
