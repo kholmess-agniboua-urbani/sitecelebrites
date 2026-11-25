@@ -26,12 +26,12 @@ function pack(page, css, folder = '') {
     .replace(/href="(?:\.\.\/)?index\.html"/g, 'href="#accueil" target="_parent"')
     .replace(/href="(?:\.\.\/index\.html)?#beyoncé"/g, 'href="#beyoncé" target="_parent"')
     .replace(/href="(?:\.\.\/)?daft-punk\.html"/g, 'href="#daft-punk" target="_parent"')
-    .replace(/href="Fansite1\/Zidane\.html"/g, 'href="#zidane" target="_parent"')
+    .replace(/href="(?:\.\.\/)?Fansite1\/Zidane\.html"/g, 'href="#zidane" target="_parent"')
     .replace(/<a href="(https:\/\/[^"]+)"(?![^>]*\btarget=)/g, '<a href="$1" target="_blank" rel="noopener noreferrer"');
 }
 
 const pages = {
-  accueil: pack('fansite.html', 'fansite.css'),
+  accueil: pack('sources/accueil.html', 'fansite.css', 'sources/'),
   daftPunk: pack('daft-punk.html', 'daft-punk.css'),
   zidane: pack('Fansite1/Zidane.html', 'Fansite1/style.css', 'Fansite1/')
 };
@@ -50,7 +50,7 @@ const html = '<!DOCTYPE html>\n' + `
   </style>
 </head>
 <body>
-  <noscript><p>Activez JavaScript pour ouvrir la présentation. Dans le dossier extrait, vous pouvez aussi <a href="fansite.html">ouvrir l’accueil</a>.</p></noscript>
+  <noscript><p>Activez JavaScript pour ouvrir la présentation. Dans le dossier extrait, vous pouvez aussi <a href="sources/accueil.html">ouvrir l’accueil</a>.</p></noscript>
   <iframe id="presentation" title="Présentation StarPulse"></iframe>
   <script id="pages" type="application/json">${archive}</script>
   <script>
@@ -89,4 +89,4 @@ const html = '<!DOCTYPE html>\n' + `
 </body>
 </html>
 `;
-writeFileSync(join(root, 'index.html'), html);
+writeFileSync(join(root, 'fansite.html'), html);
