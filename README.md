@@ -4,11 +4,14 @@ Trois portraits pour une présentation de Daft Punk, Zinédine Zidane et Beyonc�
 
 ## Ouvrir la présentation
 
-Ouvrez `index.html` dans Chrome. L’accueil présente les trois sujets et donne accès aux pages de Daft Punk et de Zidane. Beyoncé est présentée sur l’accueil.
+Sur GitHub, cliquez sur **Code**, puis **Download ZIP**. Sur Windows, cliquez sur **Extraire tout**, puis ouvrez `index.html` dans Chrome. Si Windows masque les extensions, ce fichier apparaît sous le nom **index**.
 
-Le site fonctionne sans installation ni serveur. Les images sont incluses et les liens vers les sources externes nécessitent une connexion.
+`index.html` contient les styles, les photos et la vidéo de Daft Punk. Vous pouvez le copier seul et l’ouvrir hors ligne. Les liens vers les sites externes nécessitent une connexion.
 
-## Page Zidane
+## Modifier les pages
 
-- `Fansite1/Zidane.html` contient le portrait, les articles et la galerie de quatre photos. Le formulaire de démonstration ne permet pas l’envoi.
-- `Fansite1/style.css` gère la mise en page sur ordinateur et sur mobile.
+- `fansite.html` et `fansite.css` contiennent l’accueil.
+- `daft-punk.html` et `daft-punk.css` contiennent le portrait de Daft Punk.
+- `Fansite1/Zidane.html` et `Fansite1/style.css` contiennent le portrait de Zidane. L’envoi du formulaire de démonstration est désactivé.
+
+Après avoir modifié une page, un style ou un média, exécutez `node build-presentation.mjs` pour régénérer le fichier autonome `index.html`.
