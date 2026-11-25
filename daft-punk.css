@@ -22,12 +22,6 @@ nav {
     gap: 12px;
 }
 
-nav {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-}
-
 a {
     color: #efc66f;
     text-decoration: none;
@@ -54,7 +48,9 @@ h1 {
     text-transform: uppercase;
 }
 
-video {
+.portrait {
+    box-sizing: border-box;
+    height: auto;
     display: block;
     width: 400px;
     aspect-ratio: 1 / 1;

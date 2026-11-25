@@ -1,95 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Fansite</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Le parcours de Zinédine Zidane, des Bleus au banc du Real Madrid.">
+  <title>Zinédine Zidane | StarPulse</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Barre de navigation -->
-    <nav>
-        <!--Lien Menu-->
-        <a href="index.html">Accueil</a>
-
-        <!--Lien de la premiere celebrite-->
-        <a href="page1.html">Page 1</a>
-
-        <h2>Fansite</h2>
-
-        <!--Lien deuxieme celebrite-->
-        <a href="page2.html">Page 2</a>
-    </nav>
-    <!--Page-->
-    <div class="content">
-
-        <h1>Zinédine Zidane</h1>
-
-        <div class="video-container">
-            <video controls poster="image.jpg">
-                <source src="video1.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture de vidéos.
-            </video>
-        </div>
-
-        <!-- ecrire le texte ici -->
-        <div class="text">
-            <p>
-                Zinédine Zidane, parfois surnommé Zizou, né le 23 juin 1972 à Marseille (Bouches-du-Rhône), est un footballeur international français ayant évolué au poste de milieu de terrain offensif de 1989 à 2006, devenu ensuite entraîneur. Considéré comme l'un des plus grands joueurs de l'histoire du football, il est le sélectionneur de l’équipe de France depuis le 1er août 2026.
-            </p>
-        </div>
-        
-        <div class="article">
-            <h3>Pourquoi Zinédine Zidane est-il aussi une icône de mode ?</h3>
-            <p>Source : Marie Claire</p>
-            <a href="https://www.marieclaire.fr/pourquoi-zinedine-zidane-est-il-aussi-une-icone-de-mode,1523660.asp" target="_blank">
-            Lire l'article
-            </a>
-        </div>
-        <div class="article">
-            <h3>Zinédine Zidane, nouveau sélectionneur des Bleus</h3>
-            <p>Source : Fédération française de football</p>
-            <a href="https://www.fff.fr/article/17144-zinedine-zidane-nouveau-selectionneur-des-bleus.html" target="_blank">
-            Lire l'article
-            </a>
-        </div>
-            <h2>Galerie Photos</h2>
-            <div class="gallery">
-            <img src="image.jpg" alt="Zinédine Zidane portrait">
-            <img src="image2.jpg" alt="Zinédine Zidane sur le terrain">
-            <img src="image3.jpg" alt="Zinédine Zidane entraîneur">
-            <img src="image4.jpg" alt="Zinédine Zidane Équipe de France">
-        </div>
-        <div class="contact-section">
-            <h2>Contactez moi</h2>
-            <form action="#" method="post" class="contact-form">
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
-
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
-
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html">StarPulse</a>
+      <nav aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../daft-punk.html">Daft Punk</a>
+        <a href="Zidane.html" aria-current="page">Zidane</a>
+        <a href="../index.html#beyoncé">Beyoncé</a>
+      </nav>
     </div>
-        </section>
+  </header>
+
+  <main id="contenu" tabindex="-1">
+    <section class="hero" aria-labelledby="titre">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="category">Portrait · Football</p>
+          <h1 id="titre">Zinédine<br>Zidane</h1>
+          <p class="intro">De Marseille au sommet du football mondial, le parcours d’un meneur de jeu devenu entraîneur puis sélectionneur des Bleus.</p>
+          <a class="button" href="#parcours">Découvrir son parcours <span aria-hidden="true">↓</span></a>
+        </div>
+        <img class="hero-photo" src="image4.jpg" alt="Zidane conduit le ballon sous le maillot numéro 10 de l’équipe de France." width="450" height="300">
+      </div>
+    </section>
+
+    <div class="wrap content">
+      <section id="parcours" aria-labelledby="titre-parcours">
+        <h2 id="titre-parcours">Son parcours</h2>
+        <p class="biography">Né le 23 juin 1972 à Marseille, Zinédine Zidane s’impose au poste de milieu offensif. En 1998, il inscrit deux buts de la tête en finale de la Coupe du monde face au Brésil. Il reçoit le Ballon d’or la même année, puis remporte l’Euro 2000 avec la France.</p>
+        <ol class="milestones">
+          <li><strong>1998</strong><p>Champion du monde avec les Bleus et lauréat du Ballon d’or.</p></li>
+          <li><strong>2002</strong><p>Vainqueur de la Ligue des champions avec le Real Madrid, grâce à sa volée décisive en finale.</p></li>
+          <li><strong>2016–2018</strong><p>Trois Ligues des champions consécutives comme entraîneur du Real Madrid.</p></li>
+          <li><strong>2026</strong><p>Prise de fonctions comme sélectionneur de l’équipe de France le 1er août.</p></li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="titre-galerie">
+        <h2 id="titre-galerie">En images</h2>
+        <div class="gallery">
+          <figure><img src="image.jpg" alt="Zidane devant un microphone." width="250" height="332" loading="lazy"><figcaption>En conférence de presse</figcaption></figure>
+          <figure><img src="image2.jpg" alt="Zidane, vu de dos, lève les bras sur la pelouse." width="450" height="680" loading="lazy"><figcaption>Le numéro 10</figcaption></figure>
+          <figure><img src="image3.jpg" alt="Zidane en costume suit le match au bord du terrain." width="399" height="501" loading="lazy"><figcaption>Sur le banc comme entraîneur</figcaption></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="titre-sources">
+        <h2 id="titre-sources">Pour aller plus loin</h2>
+        <ul class="sources">
+          <li><a href="https://www.fff.fr/equipe-nationale/joueur/9772-zidane-zinedine/fiche.html">Sa carrière en équipe de France</a> · FFF</li>
+          <li><a href="https://www.fff.fr/article/17144-zinedine-zidane-nouveau-selectionneur-des-bleus.html">Sa nomination à la tête des Bleus</a> · FFF</li>
+          <li><a href="https://www.marieclaire.fr/pourquoi-zinedine-zidane-est-il-aussi-une-icone-de-mode,1523660.asp">Zidane, une icône de mode</a> · Marie Claire</li>
+        </ul>
+      </section>
     </div>
-    <!-- Barre du bas -->
-    <footer>
-        <!--Lien autre page-->
-        <div class="footer-links">
-            <a href="page1.html">Page 1</a>
-            <a href="page2.html">Page 2</a>
-        </div>
-        <div class="reseaux">
-            <h3>Suivre Zinédine Zidane</h3>
-            <a href="https://www.facebook.com/p/Zinedine-zidane-Officiel-100044959302957/">Facebook</a>
-            <a href="https://www.instagram.com/zidane/" target="_blank">Instagram</a>
-        </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="../index.html">StarPulse</a>
+      <a href="https://www.instagram.com/zidane/">Zinédine Zidane sur Instagram</a>
+    </div>
+  </footer>
 </body>
 </html>
