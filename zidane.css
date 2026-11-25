@@ -47,30 +47,18 @@ nav a:hover {
     text-transform: uppercase;
 }
 
-/* Portrait */
-.portrait img {
+/* Lecteur de la finale de 1998 */
+.portrait {
     display: block;
-    width: auto;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-/* IMAGE */
-img {
     box-sizing: border-box;
-    width: 400px;
-    max-width: 100%;
+    width: min(400px, 90%);
+    aspect-ratio: 1;
     height: auto;
-    border: 4px solid white;
+    margin: 0 auto;
+    border: 4px solid var(--accent);
     border-radius: 5px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 6px;
+    background: var(--marine);
+    object-fit: contain;
 }
 
 /* TEXTE SOUS L'IMAGE */
@@ -176,17 +164,6 @@ nav a:is(:hover, :focus-visible), footer a:is(:hover, :focus-visible) {
     text-decoration: none;
 }
 
-.portrait img {
-    width: min(400px, 90%);
-    aspect-ratio: 1;
-    object-fit: cover;
-    object-position: center 30%;
-}
-
-.portrait img, .gallery img {
-    border-color: var(--accent);
-}
-
 .text, .article, .contact-section {
     text-align: left;
 }
@@ -210,18 +187,6 @@ nav a:is(:hover, :focus-visible), footer a:is(:hover, :focus-visible) {
 
 .article a {
     color: var(--accent);
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-    max-width: 750px;
-    margin: 0 auto;
-    gap: 15px;
-}
-
-.gallery img {
-    width: 100%;
 }
 
 .footer-links, .reseaux {
