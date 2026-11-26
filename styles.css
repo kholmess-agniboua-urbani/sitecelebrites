@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+header,
+footer {
+  background-color: #12161f;
+  color: #f8fafc;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header {
+  border-bottom: 4px solid #f59e0b;
+}
+
+footer {
+  border-top: 4px solid #f59e0b;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+nav a {
+  color: #f59e0b;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #f59e0b;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background-color: #f59e0b;
+  color: #12161f;
+}
+
+/* Sous-menu des mini-sites : liens plus petits, page en cours soulignée */
+.menu a {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-color: transparent;
+}
+
+.menu a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+article {
+  border-bottom: 1px solid #cbd5e1;
+  margin-bottom: 15px;
+}
+
+figure {
+  margin: 0;
+}
+
+main {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: #fff;
+  border-top: 4px solid #f59e0b;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px 40px;
+  margin-bottom: 30px;
+}
+
+img,
+video {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+}
+
+section a {
+  color: #b45309;
+  font-weight: bold;
+}
+
+/* Formulaire de contact des pages des stars */
+label,
+input,
+textarea,
+button {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+  font-weight: bold;
+  background-color: #f59e0b;
+  color: #12161f;
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 20px;
+  }
+}

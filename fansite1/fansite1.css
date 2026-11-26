@@ -1,0 +1,44 @@
+/* Daft Punk : noir et or, comme les casques */
+body {
+  background-color: #0a0a0a;
+  color: #f7f4ee;
+}
+
+header,
+footer {
+  background-color: #14151a;
+  border-color: #efc66f;
+}
+
+h1 {
+  color: #efc66f;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: #efc66f;
+  border-color: #efc66f;
+}
+
+nav a:hover {
+  background-color: #efc66f;
+  color: #0a0a0a;
+}
+
+section {
+  background-color: #191a20;
+  border-top-color: #efc66f;
+}
+
+section a {
+  color: #efc66f;
+}
+
+img,
+video {
+  border: 4px solid #efc66f;
+}
+
+button {
+  background-color: #efc66f;
+}

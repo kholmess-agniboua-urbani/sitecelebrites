@@ -1,0 +1,43 @@
+/* Beyoncé : prune et jaune citron, clin d'œil à Lemonade */
+body {
+  background-color: #fdf6e3;
+  color: #2a1033;
+}
+
+header,
+footer {
+  background-color: #2a1033;
+  border-color: #f7d046;
+}
+
+h1 {
+  color: #f7d046;
+}
+
+nav a {
+  color: #f7d046;
+  border-color: #f7d046;
+}
+
+nav a:hover {
+  background-color: #f7d046;
+  color: #2a1033;
+}
+
+section {
+  border-top-color: #f7d046;
+}
+
+section a {
+  color: #6b2a7a;
+}
+
+img,
+video {
+  border: 4px solid #2a1033;
+}
+
+button {
+  background-color: #2a1033;
+  color: #f7d046;
+}

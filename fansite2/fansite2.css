@@ -1,0 +1,40 @@
+/* Zidane : bleu, blanc, rouge de l'équipe de France */
+body {
+  background-color: #eef2fb;
+  color: #0b1f4d;
+}
+
+header,
+footer {
+  background-color: #002395;
+  border-color: #ed2939;
+}
+
+nav a {
+  color: #fff;
+  border-color: #fff;
+}
+
+nav a:hover {
+  background-color: #ed2939;
+  border-color: #ed2939;
+  color: #fff;
+}
+
+section {
+  border-top-color: #ed2939;
+}
+
+section a {
+  color: #002395;
+}
+
+img,
+video {
+  border: 4px solid #002395;
+}
+
+button {
+  background-color: #ed2939;
+  color: #fff;
+}
